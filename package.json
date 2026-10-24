@@ -1,0 +1,37 @@
+{
+  "name": "bricksmaven-mcp-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Search and export the Bricksmaven Alpha Library through MCP",
+  "type": "module",
+  "bin": {
+    "bricksmaven-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "node --import tsx src/index.ts",
+    "test": "node --import tsx --test test/*.test.ts",
+    "check": "npm run build && npm test",
+    "inspect": "node --import tsx src/cli.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.1",
+    "cheerio": "^1.0.0",
+    "dotenv": "^17.4.0",
+    "tough-cookie": "^6.0.1",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.0"
+  }
+}

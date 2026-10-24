@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "bricksmaven": {
+      "command": "node",
+      "args": ["/absolute/path/to/BM_MCP_Creation/dist/index.js"]
+    }
+  }
+}
